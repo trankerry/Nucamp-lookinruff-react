@@ -4,7 +4,19 @@
 9BA0BC
 C1B8C8 */
 
-.jumbotron {
+.navbar{
   background-color: #A9DDD6;
-  padding: 20px;
+  padding: 10px;
 }
+
+h1 {
+  color: black;
+}
+
+.site-footer {
+  background-color: #A9DDD6;
+  padding: 20px 0;
+}
+
+
+
