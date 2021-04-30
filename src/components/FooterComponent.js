@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer(props) {
     return (
-        <div className="site-footer container-fluid py-0 mt-3 mb-0 justify-content-center text-light" id="footer">
+        <div className="site-footer container-fluid py-0 mt-3 mb-0 justify-content-center" id="footer">
             <footer className="container">
                 <div className="row mt-5 justify-content-center py-5">
                     <div className="col-11">
@@ -14,11 +14,11 @@ function Footer(props) {
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
                             <h6 className="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
-                            <ul className="list-unstyled">
-                            <li><Link className="text-white no-underline" to='/home'>Home</Link></li>
-                            <li><Link className="text-white no-underline" to='/home' to='/directory'>Directory</Link></li>
-                            <li><Link className="text-white no-underline" to='/home' to='/aboutus'>About</Link></li>
-                            <li><Link className="text-white no-underline" to='/home' to='/contactus'>Contact</Link></li>
+                            <ul light className="list-unstyled">
+                            <li><Link className="text-dark no-underline" to='/home'>Home</Link></li>
+                            <li><Link className="text-dark no-underline" to='/home' to='/directory'>Directory</Link></li>
+                            <li><Link className="text-dark no-underline" to='/home' to='/aboutus'>About</Link></li>
+                            <li><Link className="text-dark no-underline" to='/home' to='/contactus'>Contact</Link></li>
                             </ul>
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-12">
@@ -38,12 +38,12 @@ function Footer(props) {
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
                             <h6 className="mt-55 mt-2 bold-text"><b>Kerry Tran</b></h6>
-                            <a href="mailto:Owner1@gmail.com" className="no-underline text-white"><small> <span><i className="fa fa-envelope"
+                            <a href="mailto:Owner1@gmail.com" className="no-underline text-dark"><small> <span><i className="fa fa-envelope"
                                 aria-hidden="true"></i></span> mail@gmail.com</small></a>
                             </div>
                             <div className="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
                             <h6 className="bold-text"><b>Lookin' Ruff</b></h6>
-                            <a href="mailto:Owner@gmail.com" className="no-underline text-white"><small> <span><i className="fa fa-envelope"
+                            <a href="mailto:Owner@gmail.com" className="no-underline text-dark"><small> <span><i className="fa fa-envelope"
                                 aria-hidden="true"></i></span> RuffRuff@gmail.com</small></a>
                             </div>
                         </div>

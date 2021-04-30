@@ -22,7 +22,7 @@ class Header extends Component {
     render() { 
         return (
             <>
-                <Navbar dark sticky='top' expand='md'>
+                <Navbar light sticky='top' expand='md'>
                     <div className="container">
                         <NavbarBrand h1 href='/'>Lookin' Ruff 🐶</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav}/>
@@ -43,9 +43,9 @@ class Header extends Component {
                                         <DropdownToggle nav caret>
                                             Services
                                         </DropdownToggle>
-                                        <DropdownMenu right>
+                                        <DropdownMenu>
                                             <DropdownItem>Boarding</DropdownItem>
-                                            <DropdownItem>Dog walking</DropdownItem>
+                                            <DropdownItem>Dog Walking</DropdownItem>
                                             <DropdownItem>Grooming</DropdownItem>
                                         </DropdownMenu>
                                     </UncontrolledDropdown>

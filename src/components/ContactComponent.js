@@ -15,15 +15,13 @@ class Contact extends Component {
 
         this.state = {
             firstName: '',
-            lastName: '',
             phoneNum: '',
             email: '',
             agree: false,
             contactType: 'By Phone',
-            feedback: '',
+            message: '',
             touched: {
                 firstName: false,
-                lastName: false,
                 phoneNum: false,
                 email: false
             }
@@ -43,36 +41,35 @@ class Contact extends Component {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col pt-5">
-                        <h2>Contact Us</h2>
+                    <div className="col pt-5 text-center">
+                        <h1>Contact Us</h1>
                         <hr />
                     </div>
                 </div>
     
-                <div className="row row-content align-items-center">
-                    <div className="col-sm-4">
-                        <h5>Our Address</h5>
+                <div className="row row-content text-center py-4">
+                    <div className="col-sm-6">
+                        <h4>Our Address</h4>
                         <address>
                             123 Address Street<br />
                             San Diego, CA 92000<br />
                         </address>
                     </div>
                     <div className="col">
-                        <a role="button" className="btn btn-link" href="tel:+18001231234"><i className="fa fa-phone" /> 1-800-123-1234</a><br />
-                        <a role="button" className="btn btn-link" href="mailto:RuffRuff@gmail.com"><i className="fa fa-envelope-o" /> RuffRuff@gmail.com</a>
+                        <a role="button" className="text-dark btn btn-link" href="tel:+18001231234"><i className="fa fa-phone" /> 1-800-123-1234</a><br />
+                        <a role="button" className="text-dark btn btn-link" href="mailto:RuffRuff@gmail.com"><i className="fa fa-envelope-o" /> RuffRuff@gmail.com</a>
                     </div>
                 </div>
             
                 <div className="row row-content">
-                    <div className="col-12">
-                        <h2>Get in touch with us</h2>
+                    <div className="col-12 text-center">
+                        <h1>Get In Touch With Us</h1>
                         <hr />
                     </div>
                     <div className="col-md-10">
                         <LocalForm onSubmit={values => this.handleSubmit(values)}>
                             <Row className="form-group">
-                                <Label htmlFor="firstName" md={2}>First Name</Label>
-                                <Col md={10}>
+                                <Col md={{size:6, offset:4}}>
                                     <Control.text model ='.firstName' id="firstName" name="firstName"
                                         className='form-control'
                                         placeholder="First Name"
@@ -96,33 +93,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="lastName" md={2}>Last Name</Label>
-                                <Col md={10}>
-                                    <Control.text model='.lastName' id="lastName" name="lastName"
-                                        className='form-control'
-                                        placeholder="Last Name"
-                                        validators={{
-                                            required,
-                                            minLength: minLength(2),
-                                            maxLength: maxLength(15)
-                                        }}
-                                    />
-                                    <Errors
-                                        className="text-danger"
-                                        model=".lastName"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Required',
-                                            minLength: 'Must be at least 2 characters',
-                                            maxLength: 'Must be 15 characters or less'
-                                        }}
-                                    />
-                                </Col>                        
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="phoneNum" md={2}>Phone</Label>
-                                <Col md={10}>
+                                <Col md={{size:6, offset:4}}>
                                     <Control.text model='.phoneNum' id="phoneNum" name="phoneNum"
                                         placeholder="Phone number"
                                         className='form-control'
@@ -148,8 +119,7 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="email" md={2}>Email</Label>
-                                <Col md={10}>
+                                <Col md={{size:6, offset:4}}>
                                     <Control.text model='.email' id="email" name="email"
                                         placeholder="Email"
                                         className='form-control'
@@ -171,38 +141,30 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Col md={{size: 4, offset: 2}}>
-                                    <div className="form-check">
-                                        <Label check>
-                                            <Control.checkbox model='.agree'
-                                                name="agree"
-                                                className='form-check-input'
-                                            /> {' '}
-                                            <strong>May we contact you?</strong>
-                                        </Label>
-                                    </div>
-                                </Col>
-                                <Col md={4}>
+                            
+                                <Col md={{size:6, offset:4}}>
                                     <Control.select model='.contactType' name="contactType"
                                         className='form-control'>
-                                        <option>By Phone</option>
-                                        <option>By Email</option>
+                                        <option selected disabled>Subject</option>
+                                        <option>Boarding</option>
+                                        <option>Dog Walking</option>
+                                        <option>Grooming</option>
+                                        <option>Other</option>
                                     </Control.select>
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Label htmlFor="feedback" md={2}>Your Feedback</Label>
-                                <Col md={10}>
-                                    <Control.textarea model='.feeback'id="feedback" name="feedback"
+                                <Col md={{size:6, offset:4}}>
+                                    <Control.textarea model='..message'id="message" name="message"
                                         rows="12"
-                                        className='form-control'
+                                        className='form-control' placeholder='Your Message'
                                     />
                                 </Col>
                             </Row>
                             <Row className="form-group">
-                                <Col md={{size: 10, offset: 2}}>
+                                <Col md={{size:6, offset:4}}>
                                     <Button type="submit" color="primary">
-                                        Send Feedback
+                                        Send Message
                                     </Button>
                                 </Col>
                             </Row>
