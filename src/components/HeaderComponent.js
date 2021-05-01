@@ -24,7 +24,7 @@ class Header extends Component {
             <>
                 <Navbar light sticky='top' expand='md'>
                     <div className="container">
-                        <NavbarBrand h1 href='/'>Lookin' Ruff 🐶</NavbarBrand>
+                        <NavbarBrand h1 href='/'>Lookin' Ruff 🐶 KT</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav}/>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
