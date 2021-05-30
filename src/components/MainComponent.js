@@ -12,6 +12,7 @@ class Main extends Component {
         return ( 
             <div>
                 <Header />
+                <Home />
                 <Switch>
                     <Route exact path='/home' component={Home} />
                     <Route exact path='/about' component={About} />
